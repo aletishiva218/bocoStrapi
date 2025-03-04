@@ -1,0 +1,32 @@
+{
+  "name": "boco-agency-backend",
+  "version": "0.1.0",
+  "private": true,
+  "description": "A Strapi application",
+  "scripts": {
+    "build": "strapi build",
+    "deploy": "strapi deploy",
+    "develop": "strapi develop",
+    "start": "strapi start",
+    "strapi": "strapi"
+  },
+  "dependencies": {
+    "@strapi/plugin-cloud": "5.10.4",
+    "@strapi/plugin-users-permissions": "5.10.4",
+    "@strapi/strapi": "5.10.4",
+    "better-sqlite3": "11.3.0",
+    "pg": "^8.13.3",
+    "pg-hstore": "^2.3.4",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "react-router-dom": "^6.0.0",
+    "styled-components": "^6.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0 <=22.x.x",
+    "npm": ">=6.0.0"
+  },
+  "strapi": {
+    "uuid": "fc72d673-9ea8-4316-b042-c0d7992835e1"
+  }
+}
