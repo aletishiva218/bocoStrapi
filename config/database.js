@@ -3,19 +3,8 @@ module.exports = ({ env }) => ({
     client: 'postgres',
     connection: {
       connectionString: env('DATABASE_URL'),
-      host: env('DATABASE_HOST', 'localhost'),
-      port: env.int('DATABASE_PORT', 5432),
-      database: env('DATABASE_NAME', 'postgres'),
-      user: env('DATABASE_USERNAME', 'postgres'),
-      password: env('DATABASE_PASSWORD', 'dsjkdfsjK12ekj42349vjkfgqlkq`1`2'),
-      ssl: env.bool('DATABASE_SSL', true) && {
-        rejectUnauthorized: false, // Important for cloud services like Supabase
-      },
+      ssl: { rejectUnauthorized: false }, // Ensure SSL is properly handled
     },
-    pool: { 
-      min: env.int('DATABASE_POOL_MIN', 2), 
-      max: env.int('DATABASE_POOL_MAX', 10) 
-    },
-    acquireConnectionTimeout: env.int('DATABASE_CONNECTION_TIMEOUT', 60000),
+    pool: { min: 2, max: 10 },
   },
 });
